@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Live Streaming Demonstration</title>
+    <style>
+        .switch {
+          position: relative;
+          display: inline-block;
+          width: 60px;
+          height: 34px;
+        }
+        
+        .switch input { 
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+        
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #ccc;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+        
+        .slider:before {
+          position: absolute;
+          content: "";
+          height: 26px;
+          width: 26px;
+          left: 4px;
+          bottom: 4px;
+          background-color: white;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+        
+        input:checked + .slider {
+          background-color: #2196F3;
+        }
+        
+        input:focus + .slider {
+          box-shadow: 0 0 1px #2196F3;
+        }
+        
+        input:checked + .slider:before {
+          -webkit-transform: translateX(26px);
+          -ms-transform: translateX(26px);
+          transform: translateX(26px);
+        }
+        
+        /* Rounded sliders */
+        .slider.round {
+          border-radius: 34px;
+        }
+        
+        .slider.round:before {
+          border-radius: 50%;
+        }
+        </style>
+        
+</head>
+<body>
+<div class="col-md-12 text-center">  
+        
+<div class="container">
+    <div class="row">
+      <div class="col"><h3 class="mt-5">Live Streaming 1</h3>
+        <img src="{{ url_for('video_feed') }}" width="100%">
+        <h2>Recording Button 1</h2>        
+        <a href="record1">   
+              
+        <label class="switch">
+             
+            <input type="checkbox" id="togBtn" onclick="record1()">
+            
+        <span class="slider round"></span>
+          </a>
+        </div>
+      <div class="col"><h3 class="mt-5">Live Streaming 2</h3>
+        <img src="{{ url_for('video_feed2') }}" width="100%">
+        <h2>Recording Button 2</h2>        
+        <a href="record2">   
+              
+        <label class="switch">
+             
+            <input type="checkbox" id="togBtn" onclick="record2()">
+            
+        <span class="slider round"></span>
+          </a></div>
+      <div class="w-100"></div>
+      <div class="col"><h3 class="mt-5">Live Streaming 3</h3>
+        <img src="{{ url_for('video_feed3') }}" width="100%">
+        <h2>Recording Button 3</h2>        
+        <a href="record3">   
+              
+        <label class="switch">
+             
+            <input type="checkbox" id="togBtn" onclick="record3()">
+            
+        <span class="slider round"></span>
+          </a></div>
+      <div class="col"><h3 class="mt-5">Live Streaming 4</h3>
+        <img src="{{ url_for('video_feed4') }}" width="100%">
+        <h2>Recording Button 4</h2>        
+        <a href="record4">   
+              
+        <label class="switch">
+             
+            <input type="checkbox" id="togBtn" onclick="record4()">
+            
+        <span class="slider round"></span>
+          </a></div>
+    </div>
+  </div>
+
+  
+</body>
+</html>
